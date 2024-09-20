@@ -21,7 +21,7 @@ public class StringPrograms {
             last position it will be length of the string minus one (1).
          */
         int lastCharPos = str.length() - 1;
-        //System.out.println(lastCharPos);
+        System.out.println("This is the position of the last character in the string before going into the loop " + lastCharPos);
 
         //Creating a for loop to cycle through each character
         for (int i = lastCharPos; i >= 0; i--){
@@ -30,6 +30,6 @@ public class StringPrograms {
             System.out.print(" we are getting character " + str.charAt(i) + " and adding it to reserved string.");
             System.out.println(" ");
         }
-        System.out.println(newStr);
+        System.out.println("Old string was " + str + " and reverse string is " + newStr);
     }
 }
