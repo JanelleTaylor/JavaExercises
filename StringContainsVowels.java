@@ -13,6 +13,7 @@ public class StringContainsVowels {
             3. If a character at the particular position is found it will be added to a counter.
         */
 
+        //Initializing and finding the length of each string
         int strOneLength = input01.length();
         int strTwoLength = input02.length();
         int strThreeLength = input03.length();
