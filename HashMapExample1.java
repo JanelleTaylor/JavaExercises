@@ -1,5 +1,6 @@
 package javaExercise.Ex06;
 import java.util.HashMap;
+import java.util.Map;
 
 /** HasMap Example
  - Create a Hashmap for Countries and their Capitals
@@ -21,7 +22,12 @@ public class HashMapExample1 {
         capitalCities.put("France", "Paris");
         capitalCities.put("Italy", "Rome");
         capitalCities.put("Japan", "Tokyo");
-        System.out.println(capitalCities);
+
+        //Looping through the hashmap and printing contents
+        System.out.println("Original Country-Capital Map:");
+        for (Map.Entry<String, String> entry : capitalCities.entrySet()) {
+            System.out.println("Country: " + entry.getKey() + ", Capital: " + entry.getValue());
+        }
 
         //Creating a newHashmap
         HashMap<String, String> newCapitalCities = new HashMap<String, String>();
@@ -29,7 +35,7 @@ public class HashMapExample1 {
         //Finding countries that begin with letter C, skipping over them and adding the others to the new hashmap
         for (String capital : capitalCities.keySet()) {
             if(capital.startsWith("C")){
-                System.out.println(capital);
+                System.out.println("Removing " + capital + " as it begins with the letter C.");
             }
             else{
                 newCapitalCities.put(capital, capitalCities.get(capital));
@@ -37,6 +43,9 @@ public class HashMapExample1 {
         }
 
         //Printing out the new hashmap minus the countries beginning with the letter C
-        System.out.println("The contents of the HashMap are: " + newCapitalCities);
+        System.out.println("\nUpdated Country-Capital Map (after removing countries starting with 'C'):");
+        for (Map.Entry<String, String> entry : newCapitalCities.entrySet()) {
+            System.out.println("Country: " + entry.getKey() + ", Capital: " + entry.getValue());
+        }
     }
 }
